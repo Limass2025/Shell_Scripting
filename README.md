@@ -1,78 +1,79 @@
-# Shell Scripting Automation Project
+# Shell Scripting Project
+
+## Project Overview
+This project demonstrates basic shell scripting by:
+1. Creating directories
+2. Adding system users
+3. Managing file permissions
+4. Implementing variables
+
 ## Step-by-Step Implementation
 
-### Phase 1: Environment Setup
-
-#### Step 1: Create and Verify File
+### 1. Create Script File
 ```
 mkdir shell-scripting
 cd shell-scripting
 vim my_first_shell_script.sh
+```
+
+# Create directories
+mkdir Folder1 ,
+Folder2, 
+Folder3,
+
+# Create users
+sudo useradd user1
+sudo useradd user2
+sudo useradd user3
+
+# Verify File Creation
+bash
 ls -latr
-```
-![alt text](<Screenshot 2025-07-10 161359.png>)
 
-![alt text](<Screenshot 2025-07-10 162206.png>)
-## Step 2: Attempt Execution (Will Fail)
+# Add Execute Permission
 ```
-bash./my_first_shell_script.sh
+chmod u+x my_first_shell_script.sh
+ls -l
 ```
 
-Phase 2: Fix Permissions and Execute
 
-## Step 3: Add Execute Permission
-```
-chmod 764 my_first_shell_script.sh
-ls -latr
-```
-![alt text](<Screenshot 2025-07-10 163221.png>)
-## Step 4: Execute Script
+# Execute Script
 ```
 ./my_first_shell_script.sh
 ```
+# Verify Execution
 
-Phase 3: Verify Results
+```
+ls -ld Folder*
 
-## Step 5: Check Created Folders
-```
-ls -la
-```
-![alt text](<Screenshot 2025-07-10 163328.png>)
-
-## Step 6: Check Created Users
-```
+# Check users
 id user1
 id user2
 id user3
 ```
-![alt text](<Screenshot 2025-07-10 163423.png>)
 
-# My personal example of scrpiting
-Variables in Shell Scripting
-Variables are essential for creating dynamic and flexible programs.
-## Variable Declaration and Initialization
-``` 
-bashname="John"
-age=25
-```
-Retrieving Variable Values
-```
-echo $name
-echo "Hello, $name!"
-echo "You are $age years old"
-```
-Example Script with Variables
+![alt text](<Screenshot 2025-07-12 130041.png>)
 
-# Variable example
-```
-username="admin"
-folder_count=3
+![alt text](<Screenshot 2025-07-12 130911.png>)
 
-echo "Creating $folder_count folders for user $username"
-mkdir "${username}_folder1"
-mkdir "${username}_folder2"
-mkdir "${username}_folder3"
-```
-![alt text](<Screenshot 2025-07-10 150012.png>)
+6. Variable Demonstration
+Create variables_demo.sh:
 
+bash
+#!/bin/bash
+
+name="Linux_Learner"
+count=3
+current_dir=$(pwd)
+
+echo "Welcome $name!"
+echo "Created $count folders in $current_dir"
+Run with:
+
+```
+chmod +x variables_demo.sh
+./variables_demo.sh
+```
+
+![alt text](<Screenshot 2025-07-12 130343.png>)
 Thanks
